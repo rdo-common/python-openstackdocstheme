@@ -5,8 +5,8 @@
 %global pypi_name openstackdocstheme
 
 Name:           python-%{pypi_name}
-Version:        1.2.7
-Release:        2%{?dist}
+Version:        1.3.0
+Release:        1%{?dist}
 Summary:        OpenStack Docs Theme
 
 License:        ASL 2.0
@@ -112,6 +112,9 @@ rm -rf html/.{doctrees,buildinfo}
 %doc html
 
 %changelog
+* Mon Apr 18 2016 Javier Peña <jpena@redhat.com> - 1.3.0-1
+- Bumped to upstream release 1.3.0
+
 * Thu Mar 03 2016 Javier Peña <jpena@redhat.com> - 1.2.7-2
 - Fixed prep section
 - Removed unneeded comments
