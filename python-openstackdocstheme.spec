@@ -6,7 +6,7 @@
 
 Name:           python-%{pypi_name}
 Version:        1.3.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        OpenStack Docs Theme
 
 License:        ASL 2.0
@@ -112,6 +112,9 @@ rm -rf html/.{doctrees,buildinfo}
 %doc html
 
 %changelog
+* Tue Jul 19 2016 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.3.0-2
+- https://fedoraproject.org/wiki/Changes/Automatic_Provides_for_Python_RPM_Packages
+
 * Mon Apr 18 2016 Javier Peña <jpena@redhat.com> - 1.3.0-1
 - Bumped to upstream release 1.3.0
 
