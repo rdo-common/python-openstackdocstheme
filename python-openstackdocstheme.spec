@@ -6,7 +6,7 @@
 
 Name:           python-%{pypi_name}
 Version:        1.4.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        OpenStack Docs Theme
 
 License:        ASL 2.0
@@ -83,7 +83,7 @@ sed -i 's/analytics_tracking_code.*/analytics_tracking_code\ =/' openstackdocsth
 %py3_build
 %endif
 # generate html docs
-PYTHONPATH=. sphinx-build doc/source html
+PYTHONPATH=. sphinx-build-2 doc/source html
 # remove the sphinx-build leftovers
 rm -rf html/.{doctrees,buildinfo}
 
@@ -112,6 +112,9 @@ rm -rf html/.{doctrees,buildinfo}
 %doc html
 
 %changelog
+* Fri Aug 19 2016 Javier Peña <jpena@redhat.com> - 1.4.0-2
+- Use sphinx-build-2 for doc generation, there are issues with the Python3 version
+
 * Fri Aug 19 2016 Javier Peña <jpena@redhat.com> - 1.4.0-1
 - Bumped to upstream release 1.4.0
 - Fixed source URL
