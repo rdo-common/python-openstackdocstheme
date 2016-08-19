@@ -5,13 +5,13 @@
 %global pypi_name openstackdocstheme
 
 Name:           python-%{pypi_name}
-Version:        1.3.0
-Release:        2%{?dist}
+Version:        1.4.0
+Release:        1%{?dist}
 Summary:        OpenStack Docs Theme
 
 License:        ASL 2.0
 URL:            http://docs.openstack.org/
-Source0:        https://pypi.python.org/packages/source/o/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
+Source0:        https://pypi.io/packages/source/o/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
 Patch0001:      0001-Remove-all-Google-Analytics-tracking.patch
 Patch0002:      0002-Remove-external-references.patch
 BuildArch:      noarch
@@ -112,6 +112,10 @@ rm -rf html/.{doctrees,buildinfo}
 %doc html
 
 %changelog
+* Fri Aug 19 2016 Javier Peña <jpena@redhat.com> - 1.4.0-1
+- Bumped to upstream release 1.4.0
+- Fixed source URL
+
 * Tue Jul 19 2016 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.3.0-2
 - https://fedoraproject.org/wiki/Changes/Automatic_Provides_for_Python_RPM_Packages
 
