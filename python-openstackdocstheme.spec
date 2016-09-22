@@ -5,8 +5,8 @@
 %global pypi_name openstackdocstheme
 
 Name:           python-%{pypi_name}
-Version:        1.4.0
-Release:        2%{?dist}
+Version:        1.5.0
+Release:        1%{?dist}
 Summary:        OpenStack Docs Theme
 
 License:        ASL 2.0
@@ -112,6 +112,9 @@ rm -rf html/.{doctrees,buildinfo}
 %doc html
 
 %changelog
+* Thu Sep 22 2016 Javier Peña <jpena@redhat.com> - 1.5.0-1
+- Bumped to upstream release 1.5.0
+
 * Fri Aug 19 2016 Javier Peña <jpena@redhat.com> - 1.4.0-2
 - Use sphinx-build-2 for doc generation, there are issues with the Python3 version
 
