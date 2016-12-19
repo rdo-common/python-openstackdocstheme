@@ -6,7 +6,7 @@
 
 Name:           python-%{pypi_name}
 Version:        1.5.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        OpenStack Docs Theme
 
 License:        ASL 2.0
@@ -112,6 +112,9 @@ rm -rf html/.{doctrees,buildinfo}
 %doc html
 
 %changelog
+* Mon Dec 19 2016 Miro Hrončok <mhroncok@redhat.com> - 1.5.0-2
+- Rebuild for Python 3.6
+
 * Thu Sep 22 2016 Javier Peña <jpena@redhat.com> - 1.5.0-1
 - Bumped to upstream release 1.5.0
 
