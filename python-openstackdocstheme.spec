@@ -5,8 +5,8 @@
 %global pypi_name openstackdocstheme
 
 Name:           python-%{pypi_name}
-Version:        1.5.0
-Release:        3%{?dist}
+Version:        1.11.0
+Release:        1%{?dist}
 Summary:        OpenStack Docs Theme
 
 License:        ASL 2.0
@@ -83,7 +83,7 @@ sed -i 's/analytics_tracking_code.*/analytics_tracking_code\ =/' openstackdocsth
 %py3_build
 %endif
 # generate html docs
-PYTHONPATH=. sphinx-build-2 doc/source html
+python setup.py build_sphinx
 # remove the sphinx-build leftovers
 rm -rf html/.{doctrees,buildinfo}
 
@@ -112,6 +112,9 @@ rm -rf html/.{doctrees,buildinfo}
 %doc html
 
 %changelog
+* Wed Jun 28 2017 Javier Peña <jpena@redhat.com> - 1.11.0-1
+- Updated to upstream release 1.11.0 (bz#1435494)
+
 * Sat Feb 11 2017 Fedora Release Engineering <releng@fedoraproject.org> - 1.5.0-3
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_26_Mass_Rebuild
 

@@ -1,32 +1,28 @@
-From 4077292a13a07da9fee5895c694fc7210832ba85 Mon Sep 17 00:00:00 2001
+From 677d22bb6f46ed7459a171efae92ee8fe2427836 Mon Sep 17 00:00:00 2001
 From: Javier Pena <jpena@redhat.com>
-Date: Fri, 19 Aug 2016 14:01:32 +0200
-Subject: [PATCH] Remove external references
+Date: Wed, 28 Jun 2017 12:44:23 +0200
+Subject: [PATCH 2/2] Remove external references
 
-The theme includes several external scripts and references, which
+The theme includes some external scripts and references, which
 could be used for tracking and web browsing statistics. Since they
 are not needed for the theme purposes and add privacy concerns, we
 are removing them.
 ---
- openstackdocstheme/theme/openstackdocs/css.html        |  8 --------
- openstackdocstheme/theme/openstackdocs/header.html     | 18 ------------------
- .../theme/openstackdocs/script_footer.html             | 14 --------------
- 3 files changed, 40 deletions(-)
+ openstackdocstheme/theme/openstackdocs/css.html | 7 -------
+ 1 file changed, 7 deletions(-)
 
 diff --git a/openstackdocstheme/theme/openstackdocs/css.html b/openstackdocstheme/theme/openstackdocs/css.html
-index db22395..bbe27a8 100644
+index 369cf8b..5079a3a 100644
 --- a/openstackdocstheme/theme/openstackdocs/css.html
 +++ b/openstackdocstheme/theme/openstackdocs/css.html
-@@ -5,16 +5,8 @@
- <link href="{{pathto('_static/css/native.css', 1)}}" rel="stylesheet">
+@@ -6,14 +6,7 @@
  
  <!-- Fonts -->
--<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+ <link href="{{pathto('_static/css/font-awesome.css', 1)}}" rel="stylesheet">
 -<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
  
  <!-- Custom CSS -->
  <link href="{{pathto('_static/css/combined.css', 1)}}" rel="stylesheet">
- <link href="{{pathto('_static/css/styles.css', 1)}}" rel="stylesheet">
  
 -<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 -<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -34,57 +30,6 @@ index db22395..bbe27a8 100644
 -    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 -    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 -<![endif]-->
-diff --git a/openstackdocstheme/theme/openstackdocs/header.html b/openstackdocstheme/theme/openstackdocs/header.html
-index 0979546..2d06325 100644
---- a/openstackdocstheme/theme/openstackdocs/header.html
-+++ b/openstackdocstheme/theme/openstackdocs/header.html
-@@ -12,24 +12,6 @@
-       </div>
-       <div class="search-icon show"><i class="fa fa-search"></i> Search</div></div>
-       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
--      <div class="search-container tiny">
--        <div id="gcse">
--          <script type="text/javascript">
--(function() {
--  var cx = '000108871792296872333:noj9nikm74i';
--  var gcse = document.createElement('script');
--  gcse.type = 'text/javascript';
--  gcse.async = true;
--  gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
--      '//www.google.com/cse/cse.js?cx=' + cx;
--  var s = document.getElementsByTagName('script')[0];
--  s.parentNode.insertBefore(gcse, s);
--})();
--          </script>
--          <gcse:search gname="standard"></gcse:search>
--        </div>
--        <i class="fa fa-times close-search"></i>
--      </div>
-       <ul class="nav navbar-nav navbar-main show">
-         <li>
-           <div id="gcse-mobile">
-diff --git a/openstackdocstheme/theme/openstackdocs/script_footer.html b/openstackdocstheme/theme/openstackdocs/script_footer.html
-index 59f237a..8233c08 100644
---- a/openstackdocstheme/theme/openstackdocs/script_footer.html
-+++ b/openstackdocstheme/theme/openstackdocs/script_footer.html
-@@ -59,17 +59,3 @@
- 
-     logABug(bugTitle, bugProject, fieldComment, fieldTags);
- </script>
--
--<!-- Javascript for search boxes (both sidebar and top nav) -->
--<script type="text/javascript">
--(function() {
--var cx = '000108871792296872333:noj9nikm74i';
--var gcse = document.createElement('script');
--gcse.type = 'text/javascript';
--gcse.async = true;
--gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
--'//www.google.com/cse/cse.js?cx=' + cx;
--var s = document.getElementsByTagName('script')[0];
--s.parentNode.insertBefore(gcse, s);
--})();
--</script>
 -- 
-2.7.4
+2.9.4
 
