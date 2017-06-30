@@ -111,7 +111,7 @@ rm -rf html/.{doctrees,buildinfo}
 %endif
 
 %files -n python-%{pypi_name}-doc
-%doc html
+%doc doc/build/html
 
 %changelog
 * Wed Jun 28 2017 Javier Peña <jpena@redhat.com> - 1.11.0-1
