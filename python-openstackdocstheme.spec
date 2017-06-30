@@ -25,7 +25,6 @@ BuildRequires:  python2-devel
 BuildRequires:  python-setuptools
 BuildRequires:  python-pbr >= 1.8
 BuildRequires:  python-sphinx
-BuildRequires:  python-oslo-sphinx
 BuildRequires:  git
 
 Requires: python-pbr
@@ -47,7 +46,6 @@ BuildRequires:  python3-devel
 BuildRequires:  python3-setuptools
 BuildRequires:  python3-pbr >= 1.8
 BuildRequires:  python3-sphinx
-BuildRequires:  python3-oslo-sphinx
 BuildRequires:  git
 
 Requires: python3-pbr
