@@ -72,7 +72,7 @@ Theme and extension support for Sphinx documentation that is published to
 docs.openstack.org. Intended for use by OpenStack projects.
 
 %prep
-%autosetup -n %{pypi_name}-%{version} -p1
+%autosetup -n %{pypi_name}-%{version} -p1 -S git
 
 %build
 # Make sure there is no Google Analytics
