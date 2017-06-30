@@ -77,6 +77,8 @@ docs.openstack.org. Intended for use by OpenStack projects.
 %build
 # Make sure there is no Google Analytics
 sed -i 's/analytics_tracking_code.*/analytics_tracking_code\ =/' openstackdocstheme/theme/openstackdocs/theme.conf
+# Prevent doc build warnings from causing a build failure
+sed -i '/warning-is-error/d' setup.cfg
 
 %py2_build
 %if 0%{?with_python3}
