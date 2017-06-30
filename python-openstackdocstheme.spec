@@ -29,6 +29,7 @@ BuildRequires:  git
 
 Requires: python-pbr
 Requires: python-requests
+Requires: python-sphinx >= 1.6.2
 
 %description -n python2-%{pypi_name}
 OpenStack docs.openstack.org Sphinx Theme
@@ -50,6 +51,7 @@ BuildRequires:  git
 
 Requires: python3-pbr
 Requires: python3-requests
+Requires: python3-sphinx >= 1.6.2
 
 %description -n python3-%{pypi_name}
 OpenStack docs.openstack.org Sphinx Theme
